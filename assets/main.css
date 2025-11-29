@@ -18,7 +18,6 @@ body {
 #nav{
     width: 100%;
     height: 50px;
-    background-color: aquamarine;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -30,7 +29,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: coral;
 }
 
 #navBox a {
@@ -39,13 +37,22 @@ body {
     margin-top: 20px;
     margin: 10px 0px;
     padding: 10px;
-}
-
-#navBox a:hover {
-    background-color: #1f1f1f;
     cursor: pointer;
 }
 
+#navBox a:hover {
+   transform: scale(1.1);
+    transition: 1s;
+}
+
 #waitlist{
-    
+    background-color: #1f1f1f;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#waitlist:hover{
+    transform: scale(1.1);
 }
