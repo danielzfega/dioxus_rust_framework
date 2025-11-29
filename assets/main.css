@@ -1,7 +1,7 @@
 /* App-wide styling */
 body {
-    background-color: #0f1116;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
 }
@@ -14,33 +14,38 @@ body {
     align-items: center;
 }
 
-#links {
-    width: 400px;
-    text-align: left;
-    font-size: x-large;
-    color: white;
+
+#nav{
+    width: 100%;
+    height: 50px;
+    background-color: aquamarine;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-#links a {
-    color: white;
+#navBox{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: coral;
+}
+
+#navBox a {
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-top: 20px;
     margin: 10px 0px;
-    border: white 1px solid;
-    border-radius: 5px;
     padding: 10px;
 }
 
-#links a:hover {
+#navBox a:hover {
     background-color: #1f1f1f;
     cursor: pointer;
 }
 
-#header {
-    max-width: 1200px;
+#waitlist{
+    
 }
-
-
-

@@ -1,9 +1,10 @@
-use dioxus::prelude::*;
+use dioxus::{html::{button, div, img}, prelude::*};
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
 const MAIN_CSS: Asset = asset!("/assets/main.css");
 const HEADER_SVG: Asset = asset!("/assets/header.svg");
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
+const LOGO: Asset = asset!("/assets/logo.jpeg");
 
 fn main() {
     dioxus::launch(App);
@@ -22,17 +23,41 @@ fn App() -> Element {
 #[component]
 pub fn Hero() -> Element {
     rsx! {
-        div {
-            id: "hero",
-            img { src: HEADER_SVG, id: "header" }
-            div { id: "links",
-                a { href: "https://dioxuslabs.com/learn/0.7/", "📚 Learn Dioxus" }
-                a { href: "https://dioxuslabs.com/awesome", "🚀 Awesome Dioxus" }
-                a { href: "https://github.com/dioxus-community/", "📡 Community Libraries" }
-                a { href: "https://github.com/DioxusLabs/sdk", "⚙️ Dioxus Development Kit" }
-                a { href: "https://marketplace.visualstudio.com/items?itemName=DioxusLabs.dioxus", "💫 VSCode Extension" }
-                a { href: "https://discord.gg/XgGxMSkvUM", "👋 Community Discord" }
+        div { 
+            
+            div {
+                id: "nav",
+                div {
+                    id: "navBox",
+                    img{src: LOGO, id: "logo" }
+                },
+                div{
+                    id: "navBox",
+                    a { href: "", "About Plan" }
+                    a { href: "", "Products" }
+                    a { href: "", "Community" }
+                }, 
+                div { 
+                    id: "navBox",
+                    button{
+                        id: "waitlist",
+                        "Join the Waitlist"
+                    }
+                }
             }
-        }
+         }
+        // div {
+        //     id: "hero",
+        //     img { src: HEADER_SVG, id: "header" }
+        //     div { id: "links",
+        //         a { href: "https://dioxuslabs.com/learn/0.7/", "📚 Learn Dioxus" }
+        //         a { href: "https://dioxuslabs.com/awesome", "🚀 Awesome Dioxus" }
+        //         a { href: "https://github.com/dioxus-community/", "📡 Community Libraries" }
+        //         a { href: "https://github.com/DioxusLabs/sdk", "⚙️ Dioxus Development Kit" }
+        //         a { href: "https://marketplace.visualstudio.com/items?itemName=DioxusLabs.dioxus", "💫 VSCode Extension" }
+        //         a { href: "https://discord.gg/XgGxMSkvUM", "👋 Community Discord" }
+        //     }
+        // }
     }
 }
+ 
